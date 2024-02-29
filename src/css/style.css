@@ -2,60 +2,51 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  font-weight: 800;
   background-color: var(--background-color);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.advice-card {
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.advice {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--advice-card-color);
-  height: 280px;
-  width: 450px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.55);
-  border-radius: 15px;
-  justify-content: space-around;
-  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  width: 345px;
 }
-.advice-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 18px;
-  gap: 20px;
-}
-.advice-content span {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 4px;
+.advice .advice-id {
   color: var(--advice-dice-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 15px;
+  margin-top: 30px;
 }
-.advice-content p {
-  font-weight: 800;
+.advice .advice-description {
+  font-size: 23px;
+  padding: 23px;
+  text-align: center;
   color: var(--text-color);
 }
 
-.dice-divider {
-  width: 85%;
-}
-
-.dice-container {
-  position: relative;
-  top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  height: 60px;
+.advice .advice-update {
   width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
   background-color: var(--advice-dice-color);
-  cursor: pointer;
+  transform: translateY(50%);
 }
 
-.dice-container:hover {
-  box-shadow: -1px -1px 35px var(--advice-dice-color);
-  transition: all ease-out 0.3s;
+.advice .advice-update:hover {
+  color: #53ffab;
+  cursor: pointer;
+  box-shadow: 0 5px 15px var(--advice-dice-color);
 }
